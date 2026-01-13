@@ -30,8 +30,11 @@ if (!fs.existsSync(SUBS_FILE)) fs.writeFileSync(SUBS_FILE, JSON.stringify([]));
 if (!fs.existsSync(NEWS_FILE)) {
     const initialNews = [
         { id: 1, date: 'Jan 12, 2024', title: 'New Portfolio Launch', excerpt: 'Successfully launched the new premium portfolio design with integrated backend.', category: 'Update' },
-        { id: 2, date: 'Jan 05, 2024', title: 'Award Nomination', excerpt: 'My latest SaaS project was nominated for an interface design award.', category: 'Achievement' },
-        { id: 3, date: 'Dec 20, 2023', title: 'React Performance Guide', excerpt: 'Published a short guide on optimizing React apps for better Lighthouse scores.', category: 'Article' }
+        { id: 2, date: 'Jan 10, 2024', title: 'AI Integration in Web Dev', excerpt: 'Exploring the future of generative UI and how it will reshape the user experience across SaaS platforms.', category: 'Article' },
+        { id: 3, date: 'Jan 05, 2024', title: 'Award Nomination', excerpt: 'My latest SaaS project was nominated for an interface design award.', category: 'Achievement' },
+        { id: 4, date: 'Dec 28, 2023', title: 'Open Source Contribution', excerpt: 'Contributed a series of high-performance animation hooks to the React-Spring library.', category: 'Contribution' },
+        { id: 5, date: 'Dec 20, 2023', title: 'React Performance Guide', excerpt: 'Published a short guide on optimizing React apps for better Lighthouse scores.', category: 'Article' },
+        { id: 6, date: 'Dec 15, 2023', title: 'Figma to Code Mastery', excerpt: 'A deep dive into my professional workflow for translating complex designs into pixel-perfect code.', category: 'Tutorial' }
     ];
     fs.writeFileSync(NEWS_FILE, JSON.stringify(initialNews, null, 2));
 }

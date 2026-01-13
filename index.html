@@ -18,6 +18,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+    </div>
 
     <!-- Navigation -->
     <nav id="main-nav">
@@ -94,10 +97,17 @@
             <div class="section-header">
                 <h2>Featured Projects</h2>
                 <p>A selection of my recent work in design and development.</p>
+                
+                <div class="filter-group">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="web">Web Apps</button>
+                    <button class="filter-btn" data-filter="mobile">Mobile</button>
+                    <button class="filter-btn" data-filter="design">Design</button>
+                </div>
             </div>
-            <div class="project-grid">
+            <div class="project-grid" id="project-grid">
                 <!-- Project 1 -->
-                <div class="project-card reveal">
+                <div class="project-card reveal" data-category="design">
                     <div class="project-img">
                         <img src="saas.png" alt="Horizon SaaS" style="width:100%; height:100%; object-fit:cover;">
                     </div>
@@ -112,7 +122,7 @@
                     </div>
                 </div>
                 <!-- Project 2 -->
-                <div class="project-card reveal">
+                <div class="project-card reveal" data-category="web">
                     <div class="project-img">
                         <img src="ecommerce.png" alt="Luxe E-commerce" style="width:100%; height:100%; object-fit:cover;">
                     </div>
@@ -127,7 +137,7 @@
                     </div>
                 </div>
                 <!-- Project 3 -->
-                <div class="project-card reveal">
+                <div class="project-card reveal" data-category="mobile">
                     <div class="project-img">
                         <img src="cyber.png" alt="CyberVault" style="width:100%; height:100%; object-fit:cover;">
                     </div>
@@ -138,6 +148,51 @@
                             <span class="tag">Flutter</span>
                             <span class="tag">Firebase</span>
                             <span class="tag">Node.js</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 4 -->
+                <div class="project-card reveal" data-category="web">
+                    <div class="project-img">
+                        <img src="travel.png" alt="WanderAI" style="width:100%; height:100%; object-fit:cover;">
+                    </div>
+                    <div class="project-info">
+                        <h3>WanderAI Explorer</h3>
+                        <p>AI-driven travel itinerary generator with real-time flight and hotel booking integration.</p>
+                        <div class="project-tags">
+                            <span class="tag">Vue.js</span>
+                            <span class="tag">OpenAI</span>
+                            <span class="tag">Mapbox</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 5 -->
+                <div class="project-card reveal" data-category="mobile">
+                    <div class="project-img">
+                        <img src="fintech.png" alt="NeoBank" style="width:100%; height:100%; object-fit:cover;">
+                    </div>
+                    <div class="project-info">
+                        <h3>NeoBank Pro</h3>
+                        <p>Next-gen digital banking app with automated savings and investment portfolio tracking.</p>
+                        <div class="project-tags">
+                            <span class="tag">React Native</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">AWS</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 6 -->
+                <div class="project-card reveal" data-category="mobile">
+                    <div class="project-img">
+                        <img src="fitness.png" alt="FitTrack" style="width:100%; height:100%; object-fit:cover;">
+                    </div>
+                    <div class="project-info">
+                        <h3>FitTrack Pulse</h3>
+                        <p>Comprehensive fitness ecosystem connecting wearables with personalized AI coaching.</p>
+                        <div class="project-tags">
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">SQLite</span>
                         </div>
                     </div>
                 </div>
@@ -172,6 +227,28 @@
                         <div style="text-align: left;">
                             <h4 style="margin: 0;">Marcus Chen</h4>
                             <small style="color: var(--primary);">Director, Luxe Fashion</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fa-solid fa-quote-left"></i></div>
+                    <p style="font-style: italic; margin-bottom: 2rem;">"Working with Sayann was the best decision for our mobile app. The attention to detail in the UI is just incredible."</p>
+                    <div style="display: flex; align-items: center; gap: 1rem; justify-content: center;">
+                        <div style="width: 50px; height: 50px; background: #333; border-radius: 50%;"></div>
+                        <div style="text-align: left;">
+                            <h4 style="margin: 0;">Elena Rodriguez</h4>
+                            <small style="color: var(--primary);">Product Lead, CyberVault</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fa-solid fa-quote-left"></i></div>
+                    <p style="font-style: italic; margin-bottom: 2rem;">"He doesn't just write code; he understands the business goals. A rare find in the development world."</p>
+                    <div style="display: flex; align-items: center; gap: 1rem; justify-content: center;">
+                        <div style="width: 50px; height: 50px; background: #333; border-radius: 50%;"></div>
+                        <div style="text-align: left;">
+                            <h4 style="margin: 0;">David Smith</h4>
+                            <small style="color: var(--primary);">Founder, NeoBank</small>
                         </div>
                     </div>
                 </div>
