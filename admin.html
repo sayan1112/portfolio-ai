@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .admin-login { max-width: 400px; margin: 100px auto; padding: 2rem; background: var(--bg-card); border-radius: 20px; border: 1px solid var(--glass-border); }
+        .dashboard { display: none; padding: 50px 0; }
+        .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 3rem; }
+        .stat-card { background: var(--bg-card); padding: 1.5rem; border-radius: 15px; border: 1px solid var(--glass-border); text-align: center; }
+        .stat-card h2 { font-size: 2.5rem; color: var(--primary); }
+        .data-table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+        .data-table th, .data-table td { text-align: left; padding: 1rem; border-bottom: 1px solid var(--glass-border); }
+        .data-table th { color: var(--text-dim); }
+        .admin-section { margin-bottom: 4rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Login Section -->
+        <div id="login-screen" class="admin-login">
+            <h2 style="text-align: center; margin-bottom: 2rem;">Admin Login</h2>
+            <form id="admin-login-form">
+                <div class="form-group" style="margin-bottom: 1rem;">
+                    <label>Username</label>
+                    <input type="text" id="admin-user" required>
+                </div>
+                <div class="form-group" style="margin-bottom: 1.5rem;">
+                    <label>Password</label>
+                    <input type="password" id="admin-pass" required>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">Login</button>
+            </form>
+            <div id="login-error" class="form-status error" style="margin-top: 1rem;"></div>
+        </div>
+
+        <!-- Dashboard Section -->
+        <div id="dashboard" class="dashboard">
+            <div class="section-header" style="display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                    <h2>Admin Dashboard</h2>
+                    <p>Overview of your portfolio activity.</p>
+                </div>
+                <button onclick="location.href='/'" class="btn btn-secondary">Back to Site</button>
+            </div>
+
+            <div class="stat-grid">
+                <div class="stat-card">
+                    <p>Total Messages</p>
+                    <h2 id="msg-count">0</h2>
+                </div>
+                <div class="stat-card">
+                    <p>Subscribers</p>
+                    <h2 id="sub-count">0</h2>
+                </div>
+                <div class="stat-card">
+                    <p>News Posts</p>
+                    <h2 id="news-count">0</h2>
+                </div>
+            </div>
+
+            <div class="admin-section">
+                <h3>Contact Messages</h3>
+                <div style="overflow-x: auto;">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Message</th>
+                            </tr>
+                        </thead>
+                        <tbody id="messages-body"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="admin-section">
+                <h3>Subscribers</h3>
+                <div id="sub-list" style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem;"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const loginForm = document.getElementById('admin-login-form');
+        const loginScreen = document.getElementById('login-screen');
+        const dashboard = document.getElementById('dashboard');
+
+        loginForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const username = document.getElementById('admin-user').value;
+            const password = document.getElementById('admin-pass').value;
+
+            try {
+                const response = await fetch('/api/admin/login', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ username, password })
+                });
+
+                const result = await response.json();
+                if (result.success) {
+                    showDashboard(result.data);
+                } else {
+                    const error = document.getElementById('login-error');
+                    error.textContent = result.message;
+                    error.style.display = 'block';
+                }
+            } catch (err) {
+                console.error(err);
+            }
+        });
+
+        function showDashboard(data) {
+            loginScreen.style.display = 'none';
+            dashboard.style.display = 'block';
+
+            document.getElementById('msg-count').textContent = data.messages.length;
+            document.getElementById('sub-count').textContent = data.subscribers.length;
+            document.getElementById('news-count').textContent = data.news.length;
+
+            const msgBody = document.getElementById('messages-body');
+            msgBody.innerHTML = data.messages.map(m => `
+                <tr>
+                    <td>${new Date(m.timestamp).toLocaleDateString()}</td>
+                    <td>${m.name}</td>
+                    <td>${m.email}</td>
+                    <td>${m.message}</td>
+                </tr>
+            `).join('');
+
+            const subList = document.getElementById('sub-list');
+            subList.innerHTML = data.subscribers.map(email => `
+                <span class="tag" style="padding: 0.5rem 1rem;">${email}</span>
+            `).join('');
+        }
+    </script>
+</body>
+</html>

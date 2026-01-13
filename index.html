@@ -1,100 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio-Website</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Exo:ital,wght@0,100..900;1,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Saira:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
-  <body>
-    <!--Navigation links -->
-    <nav class="nav-bar">
-      <a href="#" class="logo">PORT<span>FOLIO</span></a>
-      <div class="nav-links">
-        <a href="hero" class="nav-link">Home</a>
-        <a href="#project" class="nav-link">Projects</a>
-        <a href="#" class="nav-link">About</a>
-        <a href="#" class="nav-link">Contact</a>
-      </div>
+    <meta name="description" content="Sayann Dutta - Professional UI Designer and Frontend Developer Portfolio">
+    <title>Sayann | UI Designer & Frontend Developer</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav id="main-nav">
+        <div class="container">
+            <a href="#" class="logo">SAYANN<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="#hero" class="nav-link">Home</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#contact" class="btn btn-primary" style="padding: 0.5rem 1.5rem; font-size: 0.8rem; border-radius: 8px;">Hire Me</a></li>
+            </ul>
+        </div>
     </nav>
-    <section id="hero" id="hero">
-      <div class="container">
-        <div class="hero-content">
-          <div class="hero-text">
-            <h1>CODE THE FUTURE WITH SAYANN</h1>
-            <h2>Front-end Developer & UI Designer</h2>
-            <p>
-              I bridge the gap between pixels and code. As a UI Designer, I
-              focus on intuitive flows and visual polish, and as a Frontend
-              Developer, I ensure that design is brought to life with clean,
-              performant, and accessible HTML, CSS, and JavaScript
-            </p>
-            <div class="btn-group">
-              <a href="#project" class="btn btn-primary">
-                <i class="fa-solid fa-rocket"></i>View projects</a
-              >
-              <a href="#about" class="btn btn-secondary">
-                <i class="fa-solid fa-circle-user"></i>Contact me</a
-              >
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-text">
+                    <h1>
+                        <span>CODE THE FUTURE</span>
+                        WITH SAYANN
+                    </h1>
+                    <p>I bridge the gap between pixels and code. As a UI Designer and Frontend Developer, I craft intuitive digital experiences with visual polish and performant code.</p>
+                    <div class="btn-group">
+                        <a href="#projects" class="btn btn-primary">
+                            <i class="fa-solid fa-rocket"></i> View Projects
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <i class="fa-solid fa-paper-plane"></i> Let's Talk
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-wrapper">
+                        <img src="./WhatsApp Image 2025-11-19 at 20.36.34.jpeg" alt="Sayann Dutta Profile">
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="profile-container">
-            <div class="profile-card">
-              <img
-                src="./WhatsApp Image 2025-11-19 at 20.36.34.jpeg"
-                alt="Profile Picture"
-                class="rofile-image"
-              />
-              <div class="glow-effect"></div>
-            </div>
-          </div>
         </div>
-      </div>
     </section>
-    <footer>
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-logo">NEON<span>DEV</span></div>
-          <p class="footer-text">
-            creating digital experiences that illuminate the future of the web
-            dev
-          </p>
-          <div class="social-links">
-            <a href="#" class="social-link">
-              <i class="fa-brands fa-github"></i>
-            </a>
-            <a href="#" class="social-link">
-              <i class="fa-brands fa-instagram">
-            </i>
-            </a>
-            <a href="#" class="social-link">
-                
-              <i class="fa-brands fa-linkedin"></i>
-            </a>
-            <a href="#" class="social-link"
-              ><i class="fa-brands fa-facebook"></i
-            ></a>
-          </div>
-          <p class="copyright">Designed & Developed by Sayann Dutta</p>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Services Portfolio</h2>
+                <p>Specialized in modern web technologies and user-centric design.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-bezier-curve"></i></div>
+                    <h3>UI/UX Design</h3>
+                    <p>Creating intuitive, user-friendly designs that provide seamless digital experiences across all platforms.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-code"></i></div>
+                    <h3>Frontend Dev</h3>
+                    <p>Building responsive, fast-loading, and interactive websites using modern frameworks and best practices.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+                    <h3>App Design</h3>
+                    <p>Designing mobile-first applications that feel native and look stunning on every screen size.</p>
+                </div>
+            </div>
         </div>
-      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Projects</h2>
+                <p>A selection of my recent work in design and development.</p>
+            </div>
+            <div class="project-grid">
+                <!-- Project 1 -->
+                <div class="project-card reveal">
+                    <div class="project-img">
+                        <img src="saas.png" alt="Horizon SaaS" style="width:100%; height:100%; object-fit:cover;">
+                    </div>
+                    <div class="project-info">
+                        <h3>Horizon SaaS Platform</h3>
+                        <p>A complete redesign of a cloud-based analytics dashboard with focus on data visualization.</p>
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Figma</span>
+                            <span class="tag">D3.js</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="project-card reveal">
+                    <div class="project-img">
+                        <img src="ecommerce.png" alt="Luxe E-commerce" style="width:100%; height:100%; object-fit:cover;">
+                    </div>
+                    <div class="project-info">
+                        <h3>Luxe E-commerce</h3>
+                        <p>Modern fashion marketplace featuring seamless checkout and dynamic product filtering.</p>
+                        <div class="project-tags">
+                            <span class="tag">Next.js</span>
+                            <span class="tag">Stripe</span>
+                            <span class="tag">Tailwind</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="project-card reveal">
+                    <div class="project-img">
+                        <img src="cyber.png" alt="CyberVault" style="width:100%; height:100%; object-fit:cover;">
+                    </div>
+                    <div class="project-info">
+                        <h3>CyberVault App</h3>
+                        <p>Secure password management application with encrypted storage and biometric auth.</p>
+                        <div class="project-tags">
+                            <span class="tag">Flutter</span>
+                            <span class="tag">Firebase</span>
+                            <span class="tag">Node.js</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Client Feedback</h2>
+                <p>What industry leaders say about my work.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fa-solid fa-quote-left"></i></div>
+                    <p style="font-style: italic; margin-bottom: 2rem;">"Sayann is a visionary designer. He took our complex SaaS platform and made it look like it was from the future. Highly recommended!"</p>
+                    <div style="display: flex; align-items: center; gap: 1rem; justify-content: center;">
+                        <div style="width: 50px; height: 50px; background: #333; border-radius: 50%;"></div>
+                        <div style="text-align: left;">
+                            <h4 style="margin: 0;">Sarah Jensen</h4>
+                            <small style="color: var(--primary);">CEO, Horizon Tech</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fa-solid fa-quote-left"></i></div>
+                    <p style="font-style: italic; margin-bottom: 2rem;">"The speed and quality of development is unmatched. Our conversion rate increased by 40% after the Luxe commerce launch."</p>
+                    <div style="display: flex; align-items: center; gap: 1rem; justify-content: center;">
+                        <div style="width: 50px; height: 50px; background: #333; border-radius: 50%;"></div>
+                        <div style="text-align: left;">
+                            <h4 style="margin: 0;">Marcus Chen</h4>
+                            <small style="color: var(--primary);">Director, Luxe Fashion</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section id="news">
+        <div class="container">
+            <div class="section-header">
+                <h2>Latest Updates</h2>
+                <p>Stay informed about my latest projects and design insights.</p>
+            </div>
+            <div id="news-container" class="project-grid">
+                <!-- News cards will be injected here by script.js -->
+                <div class="service-card loading-skeleton" style="height: 200px; opacity: 0.5;">
+                    <p>Loading news...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2>Technical Toolkit</h2>
+                <p>A comprehensive set of tools and technologies I use to bring ideas to life.</p>
+            </div>
+            <div class="project-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+                <div class="service-card" style="padding: 2rem;">
+                    <i class="fa-brands fa-html5" style="font-size: 3rem; color: #e34c26;"></i>
+                    <h4 style="margin-top: 1rem;">HTML5 & CSS3</h4>
+                </div>
+                <div class="service-card" style="padding: 2rem;">
+                    <i class="fa-brands fa-js" style="font-size: 3rem; color: #f7df1e;"></i>
+                    <h4 style="margin-top: 1rem;">JavaScript</h4>
+                </div>
+                <div class="service-card" style="padding: 2rem;">
+                    <i class="fa-brands fa-react" style="font-size: 3rem; color: #61dbfb;"></i>
+                    <h4 style="margin-top: 1rem;">React.js</h4>
+                </div>
+                <div class="service-card" style="padding: 2rem;">
+                    <i class="fa-brands fa-figma" style="font-size: 3rem; color: #f24e1e;"></i>
+                    <h4 style="margin-top: 1rem;">Figma Design</h4>
+                </div>
+                <div class="service-card" style="padding: 2rem;">
+                    <i class="fa-brands fa-git-alt" style="font-size: 3rem; color: #f34f29;"></i>
+                    <h4 style="margin-top: 1rem;">Git & GitHub</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p>Ready to start your next project? Let's connect and build something amazing together.</p>
+            </div>
+            
+            <div class="contact-container">
+                <form id="contact-form" class="reveal">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                        <i class="fa-solid fa-paper-plane"></i> Send Message
+                    </button>
+                    <div id="form-status" class="form-status"></div>
+                </form>
+            </div>
+
+            <div class="footer-grid" style="margin-top: 4rem;">
+                <div class="newsletter-box reveal" style="max-width: 500px; margin: 0 auto 3rem; text-align: center;">
+                    <h3>Join the Newsletter</h3>
+                    <p style="margin-bottom: 1.5rem;">Get the latest articles and design inspiration directly in your inbox.</p>
+                    <form id="newsletter-form" style="display: flex; gap: 0.5rem;">
+                        <input type="email" id="news-email" placeholder="email@example.com" required 
+                               style="flex: 1; background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); padding: 0.8rem 1.2rem; border-radius: 50px; color: white;">
+                        <button type="submit" class="btn btn-primary" style="padding: 0.8rem 2rem;">Subscribe</button>
+                    </form>
+                    <div id="news-status" class="form-status" style="margin-top: 1rem;"></div>
+                </div>
+
+                <div class="social-links">
+                    <a href="#" class="social-icon" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <p class="copyright">&copy; 2024 Sayann Dutta. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
 
+    <!-- Scripts -->
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
